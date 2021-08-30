@@ -1,0 +1,178 @@
+*{
+	font-family:sans-serif;
+}
+
+#logo{
+	width:5%;
+	border-radius:50%;
+	
+}
+header{
+	text-align:center;
+	font-size:30px;
+	vertical-align:center;
+}
+#menu{
+	overflow:hidden;
+	background-color:rgb(27,27,27);
+	font-family:sans-serif;
+	position:sticky;
+	
+	left:0px;
+	
+	width:100%;
+	text-align:center;
+}
+#menu li{
+	display:inline;
+	padding:30px;
+	
+}
+a{
+	text-decoration:none;
+	color:white;
+	padding:6px 8px;
+	
+	
+}
+#menu a:hover {
+
+  background-color:SlateBlue;
+  color:white;
+}
+h2{
+	text-align:center;
+}
+.deals{
+	padding:30px;
+	text-align:center;
+}
+.homedeal{
+	padding:20px;
+	
+}
+.homedeal:hover{
+	width:45%;
+	padding:0px;
+
+}
+/*.deal1{
+	height:10%;
+	width:15%
+}
+.deal2{
+	height:10%;
+	width:15%
+}
+.deal3{
+	height:10%;
+	width:15%
+}
+.deal4{
+	height:10%;
+	width:15%
+}
+.deal5{
+	height:10%;
+	width:15%
+}
+*/
+
+.rec{
+
+	padding:5px;
+		
+}
+/*.left{
+	float:left;
+}*/
+
+.actdeals{
+	text-align:center;
+}
+.dealimg{
+	padding:30px;
+	transition:.5s;
+	cursor:pointer;
+}
+.dealimg:hover{
+	width:40%;
+	transition:.5s;
+}
+
+#homefooter{
+	text-align:center;
+	background-color:black;
+	color:white;
+	padding:20px;
+}
+header{
+	font-size:50px;
+}
+.center{
+	position:relative;
+	left:15%;
+	width:70%;
+}
+.rec{
+	text-align:center;
+}
+
+#bill{
+	display: none;
+	border-radius: 20px;	
+	padding: 20px;
+	align-items: center;
+	justify-content: space-around;
+	flex-direction: column;
+
+}
+.main{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-direction: column;
+	height: 70vh;
+}
+.order-form{
+	border-radius: 20px;
+	padding:20px;
+}
+.size-btns{
+	outline: none;
+	border-radius: 10px;
+	border: 1px solid black;
+	background-color: white;
+	color: black;
+	padding:5px;
+	transition:0.5s;
+}
+.size-btns:hover{
+	outline: none;
+	border-radius: 10px;
+	border: 1px solid black;
+	background-color: red;
+	color: white;
+	padding:5px;
+	transition:0.5s;
+}
+
+.submit{
+	outline: none;
+	font-size: 15px;
+	border-radius: 10px;
+	border: 1px solid black;
+	background-color: white;
+	color: black;
+	padding:5px;
+	transition:0.5s;
+}
+.submit:hover{
+	outline: none;
+	border-radius: 10px;
+	border: 1px solid black;
+	background-color: blue;
+	color: white;
+	padding:5px;
+	transition:0.5s;
+}

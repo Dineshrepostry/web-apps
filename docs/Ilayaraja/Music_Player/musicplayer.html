@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Music Player</title>
+		<link rel="stylesheet" href="musicplayer.css">
+		<meta name="author" content="Dinesh">
+		<meta charset="UTF-8">
+		<script src="player.js"></script>
+		<link rel="icon" href="../favicon.png" type="image/png">
+	</head>
+	<body onload="username()">
+		
+		<header class="title">
+			<h1>Ilayaraaja</h1> 
+		</header>
+		<nav id="menu">
+			<ul>
+				<li><a href="musicplayer.html">Music player</a></li>
+				<li><a href="../About/about.html">Home</a></li>
+				<li><a href="../index.html" onclick="logout()">logout</a></li>
+				
+			</ul>
+		</nav>
+		<div class="temp">
+		<div class="player">
+			<div class="flex">
+			<audio src="Raja_Raja_Chozan_Naan.mp3" id="player" controls autoplay>
+			</audio>
+			</div>
+		</div>
+		</div>
+		<div class="slidershow middle">
+
+      <div class="slides">
+        <input type="radio" name="r" id="r1" checked>
+        <input type="radio" name="r" id="r2">
+        <input type="radio" name="r" id="r3">
+        <input type="radio" name="r" id="r4">
+        <input type="radio" name="r" id="r5">
+        <div class="slide s1">
+			<div class="des">
+				<h1>-Raaja Raja Chozan Naan-</h1>
+				
+				<h2>Movie : Rettai Vaal Kuruvi (1987)<br>Lyricist : Vaali</h2>
+		    </div>
+          
+        </div>
+        <div class="slide">
+          <div class="des">
+			<h1>-Madai Thiranthu-</h1>
+			<h2>Movie :  Nizhalgal (1976)<br>Lyricist : Vaali</h2>
+		  </div>
+        </div>
+        <div class="slide">
+          <div class="des">
+			<h1>-Mandram Vandha Thendralukku-</h1>
+			<h2>Movie :  Mouna Ragam (1986)<br>Lyricist : Vaali</h2>
+		  </div>
+        </div>
+        <div class="slide">
+          <div class="des">
+			<h1>-Punnagai Mannan-</h1>
+			<h2>Movie : Punnagai Mannan (1986)<br>Music : Ilayaraaja</h2>
+			
+		  </div>
+        </div>
+        <div class="slide">
+			<div class="des">
+				<h1>-En Iniya Pon Nilave-</h1>
+				<h2>Movie : Moodupani (1980)<br>Music : Ilayaraaja</h2>
+			</div>
+		
+        </div>
+      </div>
+	 
+      <div class="navigation">
+        <label for="r1" onclick="Player('Raja_Raja_Chozan_Naan.mp3')" class="bar"></label>
+        <label for="r2" onclick="Player('madai_thiranthu.mp3')" class="bar"></label>
+        <label for="r3" onclick="Player('Mandram_Vandha_Thendralukku.mp3')" class="bar"></label>
+        <label for="r4" onclick="Player('punnagai_mannan.mp3')" class="bar"></label>
+        <label for="r5" onclick="Player('en_iniya.mp3')" class="bar"></label>
+      </div>
+    </div>
+	<div id="user">
+			Hello <span id="username"></span>, let your mind get lost in the music..
+	</div>
+	</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Dinesh">
+    <title>Calculator</title>
+   <style>
+       * {box-sizing: border-box;}
+      
+       body {     
+          background: rgb(27,27,27);
+          padding-bottom: 30px;
+          padding-top: 30px;
+          background-color: rgb(27,27,27);
+		  color:white;
+        }  
+        #calculator   {
+          max-width: 450px;
+          margin: 0 auto;
+          border: 2px solid white;
+          border-radius: 5px;
+          font-family: 'Space Mono';
+        }
+    
+        .numbers  {
+          background: rgba(0, 0, 0, 0.5); 
+          border: 1px solid #111; 
+          padding: 20px;
+          color: #EEE; 
+          border-radius: 5px; 
+          font-size: 22px; 
+          cursor: pointer; 
+        }
+        .operator  {
+          background: rgba(0, 0, 0, 0.5);
+          border: 1px solid #111;
+          padding: 20px;
+          color: #FF0000;
+          border-radius: 5px;
+          font-size: 22px;
+          cursor: pointer;
+        }
+        
+       #output   {
+  background: none;
+  border: none;
+  box-shadow: none;
+  outline: none;
+  padding: 10px;
+  width: 100%;
+  text-align: right;
+  font-size: 40px;
+  border-radius: 0;
+}
+#bt   {
+
+  background: none;
+  border: none;
+  box-shadow: none;
+  outline: none;
+  border-bottom: #111;
+  padding: 10px;
+  width: 100%;
+  border-bottom: 2px solid #111;
+  color: #333;
+  font-size: 40px;
+  border-radius: 0;
+}
+#buttons {
+  padding: 10px;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 15px;
+  
+}
+.numbers:hover{
+    background-color: white;
+	color:black;
+}
+#acbt{
+    grid-column: span 2;
+
+}
+#equal{
+    grid-column: span 2;
+    background-color: coral;
+}
+   </style>
+   <script src="calculator.js"></script>
+</head>
+<body>
+    <div id="calculator">
+    <div id="output">
+    </div>
+    <div id="bt"></div>
+    <div id ="buttons">
+    <button class="operator" id="acbt" onclick="ac()">AC</button>
+    <button class="operator" id="equal" onclick="calc()">=</button>
+    <button class="numbers" id="1" value="1" onclick="num(this)">1</button>
+    <button class="numbers" id="2" value="2" onclick="num(this)">2</button>
+    <button class="numbers" id="3" value="3" onclick="num(this)">3</button>
+    <button class="operator" id="+" onclick="op(this)" value="+">+</button>
+    <button class="numbers" id="4" value="4"  onclick="num(this)">4</button>    
+    <button class="numbers" id="5" value="5"  onclick="num(this)">5</button>
+    <button class="numbers" id="6" value="6"  onclick="num(this)">6</button>
+    <button class="operator" id="-" value="-" onclick="op(this)">-</button>
+    <button class="numbers" id="7" value="7"  onclick="num(this)">7</button>
+    <button class="numbers" id="8" value="8"  onclick="num(this)">8</button>
+    <button class="numbers" id="9" value="9"  onclick="num(this)">9</button>
+    <button class="operator" id="/" value="/" onclick="op(this)">/</button>
+    <button class="operator" id="%" value="%" onclick="op(this)">Mod</button>
+    <button class="operator" id="*" value="*" onclick="op(this)">*</button>
+    <button class="operator" id="sqrt" value="SQRT" onclick="op(this)">SQRT</button>
+    <button class="operator" id="pow" value="pow" onclick="op(this)">pow</button>
+    </div>
+    </div>
+	<script src="calculator.js"></script>
+</body>
+
+</html>

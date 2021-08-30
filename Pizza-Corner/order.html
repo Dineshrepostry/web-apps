@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Pizza Corner</title>
+		<meta name="author" content="Dinesh"/>
+		<meta charset="utf-8"/>
+		<meta name="language" content="EN"/>
+		<link rel="stylesheet" href="css/style.css">
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+		<script>
+			var actprice=399;
+			function calc(size){
+				switch(size){
+				
+				case "small": actprice=99;
+								break;
+				case "medium": actprice=199;
+								break;
+				case "large": actprice=399;
+								break;
+				default: actprice=399;
+			
+				}
+				document.querySelector("#des").value="Pizza Price:Rs. "+actprice;
+			}
+			function Price(f){
+					var no=document.getElementById("no").value;
+					var online=0;
+					if( no>0 ){
+						if ( no <=2 ){
+							online=50;
+						}
+						else{
+							online=20;
+						}
+					}
+					else{
+						alert("enter a valid number of pizzas!!");
+						return false;
+					}
+				
+					var tax=0.065*(actprice+online);
+					var price=tax+actprice;
+					var del;
+					if (price<=200){
+						del=25;
+					}
+					else{
+						del=0;
+					}
+					price=price+del;
+					var bill=document.getElementById("bill");
+					var div=document.createElement("div");
+					var p1=document.createElement("p");
+					var text1=document.createTextNode(" number of pizzas: "+no);
+					p1.appendChild(text1);
+					var p2=document.createElement("p");
+					var text2=document.createTextNode(" cost of each pizza: "+actprice);
+					p2.appendChild(text2);
+					var text3=document.createTextNode("cost before tax");
+					var p3=document.createElement("p");
+					p3.appendChild(text3);
+					var text4=document.createTextNode("Tax: "+tax);
+					var p4=document.createElement("p");
+					p4.appendChild(text4);
+					var text5=document.createTextNode("delivery charge : "+del);
+					var p5=document.createElement("p");
+					
+					p5.appendChild(text5);
+					var text6=document.createTextNode("Tot. cost: "+price);
+					var p6=document.createElement("p");
+					
+					p6.appendChild(text6);
+					div.appendChild(p1);
+					div.appendChild(p2);
+					div.appendChild(p3);
+					div.appendChild(p4);
+					div.appendChild(p5);
+					div.appendChild(p6);
+					bill.append(div);
+					return true;
+					alert(" number of pizzas: "+no+'\n'+" cost of each pizza: "+actprice+'\n'+"cost before tax"+'\n'+"Tax: "+tax+'\n'+"delivery charge : "+del+'\n'+"Tot. cost: "+price);
+				
+			}
+			
+			$(document).ready(function(){
+				$("form").submit(function(){
+					$("#bill").css("display","flex");
+					$(".submit").prop("disabled",true);
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<header><img src="images/pizza-logo.jpg" alt="logo" id="logo"/><i>Corner</i></header>
+		<br>
+		<nav id="menu">
+			<ul>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="pizza.html">Our recipes</a></li>
+				<li><a href="deals.html">Our deals</a></li>
+				<li><a href="order.html">Order</a></li>
+			</ul>
+		</nav>
+		<div class="main">
+		<form method="get" action="#" >
+			<fieldset class="order-form"><legend><span style="color:red">Pizza</span> Corner –<span style="color:red">Order</span>  Form</legend>
+			<br>
+			<input type="text" readonly value="Pizza Price:Rs. 399" id="des"/>
+			<br>
+			<br>
+			<label for="size">Pizza Size :</label>
+			<button id="small" onclick="calc('small')" class="size-btns">Small</button>
+			<button id="medium"onclick="calc('medium')" class="size-btns">Medium</button>
+			<button id="large"onclick="calc('large')" class="size-btns">Large</button>
+			<br><br>
+			<babel for="pizza">Pizza: </babel>
+			<select id="pizza">
+				<option value="Cheese n Corn">Cheese n Corn</option>
+				<option value="Cheese n Tomato">Cheese n Tomato</option>
+				<option value="Paneer Makhani">Paneer Makhani</option>
+				<option value="Pepper Barbecue Chicken
+				">Pepper Barbecue Chicken</option>
+				<option value="Chicken Fiesta">Chicken Fiesta</option>
+				<option value="Deluxe Veggie">Deluxe Veggie</option>
+				<option value="Double Cheese Margherita">Double Cheese Margherita</option>
+				<option value="Chicken Sausage">Chicken Sausage</option>
+				<option value="Mexican Green Wave">Mexican Green Wave</option>
+				<option value="Indi Tandoori Paneer">Indi Tandoori Paneer</option>
+				<option value="Chicken Golden Delight">Chicken Golden Delight</option>
+				<option value="Creamy Tomato Pasta Pizza">Creamy Tomato Pasta Pizza</option>
+			</select><br/><br/>
+			<label for="no">Enter the number of Pizza:</label>
+			<input type="number" id ="no" required />
+			<br>
+			<br>
+			<input type="submit" value="order" class="submit" onclick="Price(1)"/>
+			
+			</fieldset>
+		</form>
+		<div id="bill">
+			<span style="font-weight: bold; color:red">Refresh page to make a new order</span><br>
+			<span style="font-weight: bold;">Recipt</span>
+
+		</div>
+		</div>
+		
+	</body>
+</html>
+		
+		

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang = "en">
+	<head>
+		<title>To-Do-List</title>
+		<meta charset = "UTF-8"/> 
+		<meta name = "author" content = "Dinesh 2020115029"/> 
+		<style>
+			body{
+				background-color: rgba(27,27,27) ;
+					
+			}
+			label{
+				font-weight:bold ;
+
+			}
+			.main{
+				border : 2px solid black ; 
+				width :50%;                                
+				margin:auto; 
+				padding: 20px ;
+				background-color: white; 
+			}
+			#in{
+				width : 400px ; 
+
+			}
+			h1{
+				text-align : center ;
+				background-color:SlateBlue;
+				font-family:sans-serif;
+				height:50px; 
+				color:white ;
+			}
+			.btn{
+				background-color:rgb(27,27,27) ; 
+				color:white ; 
+				border: 2px solid black; 
+				border-radius:5px; 
+				height:30px;
+				margin-left:10px ; 
+
+			}
+			#next{
+				width : 300px ; 
+
+			}
+			#notask{
+				text-align : center ; 
+				border : 1px solid black ;  
+				box-shadow: 2px 2px 2px gray; 
+				border-radius: 5px; 
+				height:100px;
+				padding-top:30px ; 
+				font-family: Garamond, serif;
+				font-size:30px; 
+				background-color:rgb(27,27,27);
+				color:white;
+
+			}
+			h2{
+				font-family: 'Courier New', monospace;
+			}
+			li{
+				text-align : center ; 
+				border : 1px solid black ;  
+				box-shadow: 2px 2px 2px gray; 
+				border-radius: 5px; 
+				height:30px; 
+				padding-top:5px; 
+				
+			}
+			.copy{
+				float:right;
+				overflow:auto;
+
+			}
+		</style>
+		<script src="task.js"></script>
+	</head>
+	<body>
+
+		<div class = "main">
+			<h1>To Do List</h1>
+			<label for = "in">Add task:</label>
+			<input type = "text" id = "in" placeholder = "Enter a task"/>
+			<button onclick = "compute()" class = "btn" id = "mybtn">Add Task</button>
+			<div>
+				<h2>Current Tasks</h2>
+				<p id = "notask">Currently there are no tasks</p>
+				<ol id = "write"> </ol>
+
+			</div>
+			<div id = "n">
+			<label for = "next">Next Task:</label> 
+				<input type = "text" id = "next" value = "No tasks" disabled/>
+				<button onclick = "nxt()" class = "btn">Show next Task</button> 
+			<p id = "non"></p> 
+			</div>
+		</div>
+		<script src = "task.js"></script>
+	</body>
+</html>

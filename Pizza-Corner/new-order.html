@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/home.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <img src="images/pizza-logo.jpg" alt="logo" class="logo" width="100">
+        <nav id="menu">
+            <ul>
+                <li class="menu-items"><a href="home.html">Home</a></li>
+                <li class="menu-items"><a href="new-deals.html">Deals</a></li>
+                <li class="menu-items"><a href="new-recipes.html">Recipes</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="outer-order">
+        <fieldset>
+        <legend>Pizza corner-order form</legend>
+        <form action="#" class="order">
+            <span><label for="price">Pizza Price:</label>
+            <div class="price-js">299</div></span>
+           <span><label for="size">Pizza size:</label>
+            
+            <input type="radio" value="small"  class="size-js"  name="size" id="1"></span> 
+            <span><label for="1">small</label>
+           
+            <input type="radio" value="large" class="size-js"  name="size" id="2"></span>
+            <span><label for="2">large</label>
+           
+            <input type="radio" value="medium"  class="size-js" name="size" id="3"></span>
+            <span><label for="3">medium</label><br>
+            <input type="number" value="1" class="num-js"><br></span>
+            <button onclick="calculate()">Calculate</button>
+        </form>
+        </fieldset>
+    </div>
+    <footer>
+        <a href="">Mail Us</a>
+        <span>Address:87/1 Millers Road, Kilpauk ,Chennai 600010</span>
+    </footer>
+    <script>
+        function calculate() {
+            
+            var size=document.getElementsByName("size");
+          
+            var s_p=0;
+            for(var x=0;x<size.length;x++){
+                if(size[x].checked){
+                switch(size[x].value){
+                    case "small" : s_p=99;
+                                break;
+                    case "medium" : s_p=199;
+                                break;
+                    case "large" : s_p=299;
+                                break;
+                    default: s_p=299;
+                }
+                }
+            }
+           
+            var num=document.querySelector(".num-js").value;
+         
+            var o_p;
+            if(num<2){
+                o_p=50;
+            }
+            else{
+                o_p=20;
+            }
+            var temp_tot=s_p*num*o_p ;
+            temp_tot+=((6.5/100)*temp_tot);
+            
+            if(temp_tot < 200){
+                temp_tot+=25;
+            }
+            else{
+                temp_tot+=0;
+            }
+
+            document.querySelector(".price-js").innerHTML=temp_tot;
+            alert("Grand total: "+temp_tot)
+        }
+    </script>
+</body>
+</html>
