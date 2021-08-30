@@ -12,7 +12,7 @@
 			}
 			else{
 				localStorage.setItem("name",nm);
-				window.location.href = "http://www.w3schools.com";
+				window.location.href = "About/about.html";
 			}
 			}
 			
