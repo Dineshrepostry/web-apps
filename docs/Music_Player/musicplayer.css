@@ -10,7 +10,11 @@ body{
 
 
 }
-
+.outer{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
 audio{
 	width:23%;
 	

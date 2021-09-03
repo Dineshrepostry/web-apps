@@ -4,13 +4,13 @@ body{
 }
 
 
-.intro{
+/* .intro{
 	
-	background-color:black;
-	font-family:sans-serif;
+	background-color:blacik;
+	font-family:sans-serf;
 	color:white;
 	font-size:15px;
-	height:1000px;
+	height:100vh;
 	overflow-x:hidden;
 	text-align:center;
 
@@ -78,7 +78,7 @@ body{
 	position:relative;
 	top:-25px;
 	background-color:white;
-	height:1000px;
+	height:100vh;
 	color:black;
 	padding:20px;
 	font-family:sans-serif;
@@ -203,4 +203,203 @@ a{
 }
 #mail:hover{
 	width:60px;
+} */
+
+.intro{
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	font-family:sans-serif;
+	color:white;
+	text-align: center;
+	font-size:15px;
+	font-family:sans-serif;
+	color:white;
+	font-size:15px;
 }
+.intro #username{
+	font-size:60px;
+	font-family:'Brush Script MT', cursive;
+	color:hotpink;
+	
+}
+#legend{
+	font-family:'Brush Script MT', cursive;
+	font-size:150px;
+	color:#feff00; 
+	transition:10s; 
+}
+
+.about{
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	height:100vh;
+	background-color:black;
+	font-family: sans-serif;
+	
+}
+.inner{
+	background-color:black;
+	width:80%;
+	height: 80%;
+	color:white;
+	padding-top:10%;
+	font-family:sans-serif;
+}
+#about{
+	float:right;
+	width:30%;
+	padding:10px;
+}
+
+.about h1{
+
+	font-size:60px;
+}
+.about p{
+	/* margin-top:100px;
+	margin-left:100px;
+	margin-right:750px; */
+	font-size:125%;
+	text-align:justify;
+}
+#about1{
+	float:left;
+	width:30%;
+	padding:10px;
+}
+.about1{
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	background-color:white;
+	height:100vh;
+	color:black;
+	padding:20px;
+	font-family:sans-serif;
+	padding:200px;
+	
+}
+.inner-1{
+	background-color:white;
+	width:100%;
+	height: 80%;
+	color:black;
+	padding-top:10%;
+	font-family:sans-serif;
+}
+.about1 h1{
+
+	text-align:right;
+	font-size:60px;
+}
+
+#about1{
+	float:left;
+	border-radius:10px;
+	width:30%;
+	padding-right:50px;
+}
+.about1 p{
+	margin-top:5%;
+	font-size:125%;
+	text-align:justify;
+}
+
+.about2{
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	height:100vh;
+	font-family: sans-serif;
+	background-color:black;
+	background-image:url(about2.jpg);
+	background-position: center;
+	background-repeat:no-repeat;
+	margin-bottom:0px;
+	color:white;
+	font-family:sans-serif;
+	
+}
+.inner-2{
+	/* background-color:black; */
+	width:80%;
+	height: 80%;
+	color:white;
+	padding-top:10%;
+	font-family:sans-serif;
+}
+.about2 h1{
+
+	font-size:60px;
+}
+.about2 p{
+	font-size:125%;
+	text-align:justify;
+	width:50%;
+}
+nav{
+	position:fixed;
+	left:0px;
+	width:20%;
+	z-index:1;
+	background-color:rgb(27,27,27);
+	height:100%;
+	opacity:0;
+	transition:.5s;
+}
+
+nav:hover{
+	opacity:1;
+	transition:.5s;
+}
+
+ul{
+	margin:400px 0px 200px 0px;
+	list-style:none;
+	color:white;
+	font-family:sans-serif;
+	
+}
+
+li{
+	padding:5px;
+}
+li:hover{
+	background-color:white;
+	color:black;
+}
+li:hover a{
+	color:black;
+}
+a{
+	text-decoration:none;
+	color:white;
+	
+}
+
+#qc{
+	color:hotpink;
+	position:fixed;
+	top:50%;
+	left:1%;
+	font-family:sans-serif;
+	z-index:1;
+	font-size:30px;
+	
+}
+#footer{
+	color:white;
+	height: 5vh;
+	background-color: black;
+	font-family:sans-serif;
+	text-align:center;
+}
+#mail{
+	width:3%;
+}
+#mail:hover{
+	width:3.5%;
+} 

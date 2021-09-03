@@ -53,17 +53,21 @@ input{
 #submit:hover{
 	background-color:SlateBlue;
 	cursor:pointer;
+	outline:none;
 	transition:0.5s;
 }
 #submit{
+	outline:none;
 	transition:0.5s;
 }
 
 #reset:hover{
 	background-color:red;
 	cursor:pointer;
+	outline:none;
 	transition:0.5s;
 }
 #reset{
+	outline:none;
 	transition:0.5s;
 }
